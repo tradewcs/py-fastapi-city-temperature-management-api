@@ -48,12 +48,6 @@ async def read_temps(
     return await get_all_temperatures(db)
 
 
-@app.post("/temperatures/update")
-async def update_temperatures(db: AsyncSession = Depends(get_db)):
-    cities = await get_all_cities(db)
-    return {"message": f"Would update temperatures for {len(cities)} cities"}
-
-
 @app.put("/temperatures/{temp_id}", response_model=TemperatureReadSchema)
 async def update_temp_endpoint(
     temp_id: int,
