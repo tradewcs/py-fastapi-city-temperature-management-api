@@ -39,5 +39,3 @@ uvicorn main:app --reload
     GET /temperatures/ - List all temperatures
 
     GET /temperatures/?city_id={id} - Filter by city
-
-    POST /temperatures/update - Fetch from external API (TODO)
