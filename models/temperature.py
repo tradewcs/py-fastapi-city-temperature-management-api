@@ -16,6 +16,3 @@ class Temperature(Base):
     )
     date_time: Mapped[datetime]
     temperature: Mapped[float]
-
-    class Config:
-        from_attributes = True

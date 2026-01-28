@@ -14,10 +14,7 @@ class City(Base):
         unique=True,
         nullable=False
     )
-    description: Mapped[String] = mapped_column(
+    additional_info: Mapped[String] = mapped_column(
         String(255),
         nullable=True
     )
-
-    class Config:
-        from_attributes = True
